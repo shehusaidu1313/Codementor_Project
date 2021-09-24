@@ -1,0 +1,212 @@
+/* measure breakpoints 
+  names           em        px   default
+/* bp-largest:    75em    = 1200  / 16 */
+/* bp large:      68.75em = 1100  / 16 */
+/* bp medium:     56.25em = 900   /16 */
+/* bp small:      37.5em  = 600   /16 */
+/* bp smallest:   31.25em = 500    /16 */
+
+/* 
+@media only screen and (max-width: 75em) {
+  .container {
+    width: 100vw;
+    margin: 2rem 0;
+    height: fit-content;
+  }
+} */
+/* /* # Front-end Style Guide
+
+## Layout */
+/* 
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Moderate violet: hsl(263, 55%, 52%)
+Very dark grayish blue: hsl(217, 19%, 35%)
+Very dark blackish blue: hsl(219, 29%, 14%)
+White: hsl(0, 0%, 100%)
+
+### Neutral
+
+Light gray: hsl(0, 0%, 81%)
+Light grayish blue: hsl(210, 46%, 95%)
+
+Note for text colors:
+
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+
+## Typography
+
+### Body Copy
+
+- Font size: 13px
+
+### Font
+
+- Family: [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)
+- Weights: 500, 600; */
+
+*/ *,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  /* 10px / 16px = 62.5%  => 1rem = 10 px */
+}
+
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  line-height: 1.6;
+  width: 100vw;
+  background-color: hsl(210, 46%, 95%);
+}
+
+.container {
+  display: grid;
+  width: 80vw;
+  margin: auto;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: repeat(4, 1fr);
+  /* background-color: hsl(210, 46%, 95%); */
+  color: inherit;
+  padding: 3rem;
+  /* align-items: start; */
+  grid-gap: 3vw;
+}
+p:first-of-type {
+  font-size: 1.5rem;
+  line-height: normal;
+  font-weight: 600;
+}
+
+p:nth-of-type(2) {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: hsl(210, 46%, 95%);
+}
+
+img {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  border: 2px srolid hsl(263, 55%, 52%);
+  display: block;
+
+  top: 0;
+  left: 0;
+}
+
+.details {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: min-content 1fr;
+  grid-row-gap: 0.5rem;
+  grid-column-gap: 1rem;
+  align-items: center;
+  justify-items: start;
+  /* background-color: aqua; */
+}
+.image-container {
+  grid-row: 1 / span 2;
+  /* margin: 1rem; */
+}
+
+.info {
+  line-height: 0.5;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #f0f0f0;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: hsl(0, 0%, 81%);
+}
+.first-container,
+.second-container,
+.third-container,
+.fourth-container,
+.fifth-container {
+  padding: inherit;
+  color: inherit;
+  border-radius: 10px;
+}
+.first-container {
+  background-color: hsl(263, 55%, 52%);
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  position: relative;
+  z-index: 10;
+}
+.second-container {
+  background-color: hsl(217, 19%, 35%);
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  color: #f0f0f0;
+}
+.third-container .info h3,
+.third-container {
+  background-color: hsl(0, 0%, 100%);
+  color: #000;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+div.third-container p:last-child,
+div.fifth-container p:last-child {
+  color: hsl(0, 0%, 50%);
+}
+.fourth-container {
+  background-color: hsl(219, 29%, 14%);
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+  color: #f0f0f0;
+}
+
+.fifth-container .info h3,
+.fifth-container {
+  background-color: hsl(0, 0%, 100%);
+  color: #161212;
+  grid-column: 4 / -1;
+  grid-row: 1 / -1;
+}
+/* footer */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.qoutation {
+  color: hsl(0, 0%, 70%);
+  font-size: 400px;
+  position: absolute;
+  top: 60px;
+  right: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: -1;
+}
